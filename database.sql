@@ -35,13 +35,13 @@ CREATE TABLE cinemadb.salle (
 
 CREATE TABLE cinemadb.genre (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(255) NOT NULL
+    nom VARCHAR(50) NOT NULL
 ) ENGINE = InnoDB;
 
 CREATE TABLE cinemadb.user (
     id INT AUTO_INCREMENT PRIMARY KEY,
     roles LONGTEXT NOT NULL,
-    email VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
     password VARCHAR(255) NOT NULL,
     tarif_id INT,
     FOREIGN KEY (tarif_id) REFERENCES tarif(id)
